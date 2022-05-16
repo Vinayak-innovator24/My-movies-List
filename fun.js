@@ -1,9 +1,9 @@
 // Book Class: Represents a Book
 class Movie {
-    constructor(title, director, date) {
+    constructor(title, director, genre) {
       this.title = title;
       this.director = director;
-      this.date = date;
+      this.genre = genre;
     }
   }
 
@@ -23,7 +23,7 @@ class Movie {
       row.innerHTML = `
         <td>${movie.title}</td>
         <td>${movie.director}</td>
-        <td>${movie.date}</td>
+        <td>${movie.genre}</td>
         <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
       `;
   
@@ -45,13 +45,13 @@ class Movie {
       container.insertBefore(div, form);
   
       // Vanish in 3 seconds
-      setTimeout(() => document.querySelector('.alert').remove(), 3000);
+      setTimeout(() => document.querySelector('.alert').remove(), 5000);
     }
   
     static clearFields() {
       document.querySelector('#title').value = '';
       document.querySelector('#director').value = '';
-      document.querySelector('#date').value = '';
+      document.querySelector('#genre').value = '';
     }
   }
   
@@ -98,14 +98,14 @@ class Movie {
     // Get form values
     const title = document.querySelector('#title').value;
     const director = document.querySelector('#director').value;
-    const date = document.querySelector('#date').value;
+    const genre = document.querySelector('#genre').value;
   
     // Validate
-    if(title === '' || director === '' || date === '') {
+    if(title === '' || director === '' || genre === '') {
       UI.showAlert('Please fill in all fields', 'danger');
     } else {
       // Instatiate book
-      const movie = new Movie(title, director, date);
+      const movie = new Movie(title, director, genre);
   
       // Add Book to UI
       UI.addMovieToList(movie);
