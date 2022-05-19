@@ -1,4 +1,4 @@
-This is a note-book like app built for personal use. It is used specefically for keeping record of unwatched movies for a person. 
+This is a note-book like app used specefically for keeping record of a person's choice of movies. 
 Three details of the movie are taken : 1) Title
                                        2) Director name
                                        3) Genre
